@@ -1,0 +1,31 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: hcl-api-gateway
+    
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+            security:    user:      name: user
+      password: userpass123
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
+      
+  instance:
+    hostname: localhost
+    #preferIpAddress: true
+
+jwt:
+  secret: BvPHGM8C0ia4uOuxxqPD5DTbWC9F9TWvPStp3pb7ARo0oK2mJ3pd3YG4lxA9i8bj6OTbadwezxgeEByY
+
+
+
+#spring.security.user.name=user
+#spring.security.user.password=pass
